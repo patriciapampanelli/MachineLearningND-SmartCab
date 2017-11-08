@@ -114,6 +114,7 @@ class LearningAgent(Agent):
 		if self.learning and random.random() > self.epsilon:
 			maxVal = self.get_maxQ(state)
 			#choose randomly if there are more than one max values
+			pos_actions = []
 			pos_actions = [act for act in pos_actions if pos_actions[act] == maxVal]
 			action = random.choice(pos_actions)
 		return action
